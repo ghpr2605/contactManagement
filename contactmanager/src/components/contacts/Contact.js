@@ -5,10 +5,10 @@ import axios from "axios";
 
 class Contact extends Component {
   state = { showContactInfo: false };
-  onDeleteClick = (id, dispatch) => {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((response) => dispatch({ type: "DELETE_CONTACT", payload: id }));
+  onDeleteClick = async (id, dispatch) => {
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+
+    dispatch({ type: "DELETE_CONTACT", payload: id });
   };
   render() {
     const { id, name, email, phone } = this.props.contact;
