@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = (props) => {
   const { text } = props;
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-0">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
       <div className="container">
         <a href="/" className="navbar-text">
           {text}
