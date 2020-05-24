@@ -2,7 +2,7 @@ import React from "react";
 
 const WelcomePage = () => {
   return (
-  <div class="container">
+  <div className="container">
       <h3>Implementation Details</h3>
       <ul>
         <li>Implemented functionality to create a Contact Book.</li>
