@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contacts from "./components/contacts/Contacts";
 import AddContact from "./components/contacts/AddContact";
+import EditContact from "./components/contacts/EditContact";
 import Header from "./components/layouts/Header";
 import About from './components/pages/About';
 import WelcomePage from './components/pages/WelcomePage';
@@ -23,7 +24,8 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={WelcomePage}></Route>
                 <Route exact path="/contacts" component={Contacts}></Route>
-                <Route exact path="/add/contact" component={AddContact}></Route>
+                <Route exact path="/contact/add" component={AddContact}></Route>
+                <Route exact path="/contact/edit/:id" component={EditContact}></Route>
                 <Route exact path="/about" component={About}></Route>
                 <Route component={NotFound}></Route>
               </Switch>
